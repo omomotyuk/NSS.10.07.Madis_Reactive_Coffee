@@ -7,7 +7,7 @@ class GeneralCard extends Component {
 
     handleDelete = (id) => {
         APIManager.delete(this.props.Elements, id)
-            .then(() => this.props.getData())
+            .then(() => this.props.getData(this.props.Elements))
     }
 
     render() {
@@ -17,9 +17,6 @@ class GeneralCard extends Component {
                 <CardText>It's good</CardText>
                 <Button color="primary" >Details</Button>
                 <Button color="danger" onClick={() => this.handleDelete(this.props.element.id)}>Delete</Button>
-
-                {/*           <button type="button" onClick={() => this.handleDelete(this.props.animal.id)}>Discharge</button>
-*/}
             </Card>
         )
     }

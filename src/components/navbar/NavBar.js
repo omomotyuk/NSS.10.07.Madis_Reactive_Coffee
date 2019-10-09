@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom"
+import { Link, withRouter } from "react-router-dom"
 
 class NavBar extends Component {
 
@@ -12,7 +12,7 @@ class NavBar extends Component {
                 <nav>
                     <ul className="container">
                         <li><Link className="nav-link" to="/">Home</Link></li>
-                        <li><Link className="nav-link" to="/coffee">Coffee</Link></li>
+                        <li><Link className="nav-link" to="/coffees">Coffee</Link></li>
                         <li><Link className="nav-link" to="/pastries">Pastries</Link></li>
                         <li><Link className="nav-link" to="/employees">Employees</Link></li>
                         <li><Link className="nav-link" to="/stores">Stores</Link></li>
@@ -28,4 +28,4 @@ class NavBar extends Component {
     }
 }
 
-export default NavBar;
+export default withRouter(NavBar);

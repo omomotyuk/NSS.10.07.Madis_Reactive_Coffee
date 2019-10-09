@@ -6,6 +6,7 @@ export default {
     },
 
     delete(resource, id) {
+        console.log("API delete resource, id:", resource, id)
         return fetch(`${remoteURL}/${resource}/${id}`, {
             method: "DELETE"
         })
