@@ -9,11 +9,14 @@ class GeneralList extends Component {
 
     getData = (Elements) => {
         APIManager.getAll(Elements).then((allElements) => {
-            this.setState({
-                allElements: allElements
+            this.setState(() => {
+                return {
+                    allElements: allElements
+                }
             })
         })
     }
+
 
     componentDidMount() {
         console.log("General list: ComponentDidMount", this.props.Elements);
