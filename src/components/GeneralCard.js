@@ -14,7 +14,7 @@ class GeneralCard extends Component {
         return (
             <Card body>
                 <CardTitle>{this.props.element.name}</CardTitle>
-                <CardText>It's good</CardText>
+                <CardText>{this.props.element.name} is good</CardText>
                 <Button color="primary" >Details</Button>
                 <Button color="danger" onClick={() => this.handleDelete(this.props.element.id)}>Delete</Button>
             </Card>

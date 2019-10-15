@@ -17,7 +17,6 @@ class GeneralList extends Component {
         })
     }
 
-
     componentDidMount() {
         console.log("General list: ComponentDidMount", this.props.Elements);
         this.getData(this.props.Elements)

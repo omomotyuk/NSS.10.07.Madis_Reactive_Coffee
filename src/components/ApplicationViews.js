@@ -11,8 +11,6 @@ class ApplicationViews extends Component {
     routePaths: ["coffees", "pastries", "employees", "stores"]
   }
 
-
-
   render() {
     return (
       <React.Fragment>
@@ -22,33 +20,12 @@ class ApplicationViews extends Component {
         }} />
       */}
 
-        {this.state.routePaths.map(routePath =>
-          <Route exact path={"/" + routePath} render={(props) => {
-            return <GeneralList {...props} Elements={routePath} />
+        {this.state.routePaths.map((routePath, index) =>
+          <Route exact path={"/" + routePath} key={index} render={(props) => {
+            return <GeneralList Elements={routePath} {...props} />
           }} />
         )}
 
-        {/*
-        <Route exact path="/coffee" render={(props) => {
-          return <GeneralList Elements={this.state.routePaths[0]} />
-        }} />
-
-        <Route exact path="/pastries" render={(props) => {
-          return <GeneralList Elements={this.state.routePaths[1]} />
-        }} />
-
-        <Route exact path="/employees" render={(props) => {
-          return <GeneralList Elements={this.state.routePaths[2]} />
-        }} />
-
-        <Route exact path="/stores" render={(props) => {
-          return <GeneralList Elements={this.state.routePaths[3]} />
-        }} />
-
-        <Route exact path="/general" render={(props) => {
-          return <GeneralList Elements={this.state.routePaths[0]} />
-        }} />
-      */}
       </React.Fragment>
     )
   }
